@@ -1,0 +1,10 @@
+@import "./sprite_variables";
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+  background-size: $spritesheet-width $spritesheet-height;
+}
+
+@include sprites($spritesheet-sprites);
